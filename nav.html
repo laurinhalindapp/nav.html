@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+	<!-- Google Font -->
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+
+	<!-------->
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+
+		.navMenu {
+			font-family: 'Advent Pro', sans-serif;
+			padding: 8px;
+			text-align: center;
+			margin: 7px auto;
+			width: fit-content;
+		}
+
+		.navMenu a {
+			color: #272727;
+			text-decoration: none;
+			text-transform: uppercase;
+			display: inline-block;
+			padding: 6px;
+		}
+
+		.background {
+			background-color: #ece5f0;
+		}
+
+		.border {
+			border: 1px solid #cccccc;
+
+		}
+
+		.navMenu a:hover {
+
+			color: #b2bda0;
+		}
+	</style>
+</head>
+
+<body>
+
+	<nav class="navMenu  border">
+		<a id="NOTES" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-book-open" style="color: #7D7C81;"></i>  NOTES</a>
+ <a id="WORKOUT VIDEOS" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-play" style="color: #7D7C81;"></i>  WORKOUT VIDEOS</a>
+ <a id="MEAL PLAN" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-apple-whole" style="color: #7D7C81;"></i>  MEAL PLAN</a>
+ <a id="MEASUREMENT LOG" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-ruler" style="color: #7D7C81;"></i>  MEASUREMENT LOG</a>
+
+
+
+
+
+	</nav>
+
+
+	<script>
+
+		let direction = "horizontal";
+		if (direction === "vertical") {
+			document.head.insertAdjacentHTML("beforeend", `<style>.navMenu a {display: block; text-align:left; margin:7px} i{width:15px; margin-right:5px} .navMenu{margin:3px}</style>`)
+		}
+
+
+		function navigate(id) {
+
+			if (id == 'NOTES')
+				window.open("https://www.notion.so/lauraspg89/NOTES-90461480ab4e4d4f8ef406c6a9dcf4dc?pvs=4", '_blank').focus();
+			else if (id == "WORKOUT VIDEOS")
+				window.open("https://www.notion.so/lauraspg89/WORKOUT-VIDEOS-ec7ceda97b05415195e07882ff4e6db7?pvs=4", '_blank').focus();
+			else if (id == "MEAL PLAN")
+				window.open("https://www.notion.so/lauraspg89/MEAL-PLAN-dec773ffa5734d219a5e170f4fc6b094?pvs=4", '_blank').focus();
+			else if (id == "MEASUREMENT LOG")
+				window.open("https://www.notion.so/lauraspg89/MEASUREMENT-LOG-6be97402aa954e81986ca71b33d63da9?pvs=4", '_blank').focus();
+			
+		}
+	</script>
+
+
+</body>
+
+</html>
